@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block title %}
+login
+{% endblock %}
+{% block content %}
+<form action="{% url 'registration' %}" method="post"  autocomplete="off">
+  {% csrf_token %}
+
+  <html>
+    <head>
+        <title>Login</title>
+        <style>
+            th{
+                font-size: 30px;
+                color: red;
+            }
+            td{
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body bgcolor="#20fa82">
+    <center>
+    <form name="contact" method="post">
+<table cellpadding="10px" cellspacing="6px" align="top" border=1 >
+        <tr>
+<th align=center colspan=2>Login</th>
+        </tr>
+        <tr>
+            <td> Username</td>
+<td><input type="text" id="username" name="username"></td>
+        </tr>
+   <tr>
+            <td> Password</td>
+<td><input type="text" id="Password" name="Password"></td>
+        </tr>
+   <td> <center><button>Login</button></center></td>
+        </tr>
+</td>
+    </table>
+    </form>
+    </body>
+</html>
+
+
+
+{% endblock %}

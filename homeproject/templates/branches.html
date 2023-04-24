@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% block title %}
+registration
+{% endblock %}
+{% block content %}
+<form action="{% url 'home' %}" method="post">
+    {% csrf_token %}
+
+<html>
+    <head>
+        <title>Form</title>
+        <style>
+            th{
+                font-size: 30px;
+                color: red;
+            }
+            td{
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body bgcolor="#20fa82">
+    <center>
+    <form name="contact" method="post">
+<table cellpadding="10px" cellspacing="6px" align="top" border=1 >
+        <tr>
+<th align=center colspan=2>Form</th>
+        </tr>
+        <tr>
+            <td> Name</td>
+<td><input type="text" id="name" name="name"></td>
+        </tr>
+
+      <tr>
+            <td> Date of Birth</td>
+            <td><input type="date"></td>
+        </tr>
+    <tr>
+            <td> Age</td>
+<td><input type="text" id="Age" name="Age"></td>
+        </tr>
+     <tr>
+            <td> Sex</td>
+            <td><input type="radio" name="sex">Male<br>
+            <input type="radio" name="sex">Female</td>
+        </tr>
+      <tr>
+            <td> Mobile</td>
+            <td><input type="text"></td>
+        </tr>
+    <tr>
+            <td> E-Mail-ID</td>
+            <td><input type="email"></td>
+        </tr>
+
+        <tr>
+            <td> Address</td>
+<td><textarea rows="4" cols="30"></textarea></td>
+        </tr>
+
+
+        <tr>
+            <td>District</td>
+            <td><select name="District">
+                <option value="ernakulam">ernakulam</option>
+                <option value="thrissur">thrissur</option>
+                <option value="kasargod">kasargod</option>
+                <option value="idukki">idukki</option>
+                 <option value="waynad">waynad</option>
+                 <option value="alapuzha">alapuzha</option>
+                 <option value="kannur">kannur</option>
+                 <option value="kottayam">kottayam</option>
+                 <option value ="Palakkad">Palakkad</option>
+                 <option value="Pathanamthitta">Pathanamthitta</option>
+                 <option value="Malappuram">Malappuram</option>
+                 <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+                 <option value="Kozhikode">Kozhikode</option>
+                 <option value="kollam">kollam</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Account</td>
+            <td><input type="checkbox" id="pri">saving account<br>
+<input type="checkbox" id="gov">current account<br>
+            </td>
+        </tr>
+     <tr>
+            <td>Materials</td>
+            <td><select name="Materials">
+                    <option value="debit card">debit card</option>
+                    <option value="credit card">credit card</option>
+                    <option value="cheque card">cheque card</option>
+                </select>
+            </td>
+        </tr>
+
+<td width=50% align=center><input type="button" value="Submit"></td>
+
+<!-- <td><center><button>submit</button></center></td>-->
+    <td><center><button>success</button></center></td>
+        </tr>
+    </div>
+    </table>
+    </form>
+    </body>
+</html>
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block title %}
+registration
+{% endblock %}
+{% block content %}
+<form action="{% url 'logout' %}" method="post">
+    {% csrf_token %}
+
+<html>
+    <head>
+        <title>Registration Form</title>
+        <style>
+            th{
+                font-size: 30px;
+                color: red;
+            }
+            td{
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body bgcolor="#20fa82">
+    <center>
+    <form name="contact" method="post">
+<table cellpadding="10px" cellspacing="6px" align="top" border=1 >
+        <tr>
+<th align=center colspan=2>Registration Form</th>
+        </tr>
+        <tr>
+            <td> Username</td>
+<td><input type="text" id="username" name="username"></td>
+        </tr>
+  <tr>
+            <td> Password</td>
+<td><input type="text" id="Password" name="Password"></td>
+        </tr>
+  <tr>
+            <td> Conform Password</td>
+<td><input type="text" id="Conform Password" name="Conform Password"></td>
+        </tr>
+
+
+
+        <tr>
+
+<td> <center><button>Register</button></center></td>
+
+        </tr>
+    </table>
+    </form>
+    </body>
+</html>
+{% endblock %}
